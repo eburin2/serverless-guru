@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-family: 'futura';
+}
+
+.title {
+  text-align: center;
+  padding-left: 7px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.date {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-weight: 500;
+}
+
+img.logo {
+  width: 115px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  height: 120px;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+
+.header-name {
+  font-weight: 600;
+  padding-left: 20px;
+}
