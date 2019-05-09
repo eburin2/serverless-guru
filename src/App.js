@@ -7,7 +7,7 @@ import Videos from './Videos';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 
-function App() {
+const App = () => {
       return (
         <Router>
           <div className="container">

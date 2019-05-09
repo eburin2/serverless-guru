@@ -27,7 +27,7 @@ header {
   justify-content: space-between;
 }
 
-ul li {
+.main-nav {
   list-style-type: none;
   padding-top: 5px;
   cursor: pointer;
@@ -36,9 +36,14 @@ ul li {
   font-size: 20px;
 }
 
-li:hover {
-  color: red;
+.main-nav-active {
+  color: #C13725;
+}
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 a:hover {
@@ -63,11 +68,16 @@ header {
   padding-bottom: 5px;
 }
 
-.header-name {
+.header-serverless-guru {
   font-weight: 600;
   padding-right: 20px;
 }
 
+.main-page-heading {
+  padding-top: 20px;
+}
+
 .vids {
   margin-top: 20px;
+  margin-bottom: 30px;
 }
