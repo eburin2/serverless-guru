@@ -29,14 +29,16 @@ header {
 
 ul li {
   list-style-type: none;
-  padding-top: 10px;
+  padding-top: 5px;
   cursor: pointer;
   color: #000;
   padding-right: 20px;
+  font-size: 20px;
 }
 
 li:hover {
   color: red;
+
 }
 
 a:hover {
@@ -64,4 +66,8 @@ header {
 .header-name {
   font-weight: 600;
   padding-right: 20px;
+}
+
+.vids {
+  margin-top: 20px;
 }
