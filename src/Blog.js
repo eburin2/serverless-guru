@@ -42,11 +42,11 @@ class Blog extends React.Component {
               {items.map(item => (
               <div className="col-md-4 col-lg-4 col-xs-6 col-sm-12">
                 <h6 className="title">{item.title}</h6>
-                <a target="_blank" rel="noopener noreferrer" href={item.link}><img alt={item.title} src={item.thumbnail} className="img-fluid"/></a>
+                <a target="_blank" rel="noopener noreferrer" href={item.link}><img alt={item.title} src={item.thumbnail} className="img-fluid blog"/></a>
                 <p className="date text-center">{item.pubDate}</p>
               </div>
-            ))}
-          </div>
+              ))}
+            </div>
       );
     }
   }
