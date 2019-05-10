@@ -16,11 +16,7 @@ const App = () => {
               <div className="col-md-12 col-xs-12">
                 <Header />
               </div>
-<<<<<<< HEAD
               <Route path="/team" exact component={Photos}/>
-=======
-              <Route path="/team" component={Photos}/>
->>>>>>> 11219aa8b57ad651f3284514ccffe9aeebfd2698
             </div>
             <div>
               <Route path="/blog" component={Blog}/>
