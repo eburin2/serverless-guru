@@ -16,6 +16,9 @@ const Header = () => {
           <NavLink exact to="/videos" className="main-nav" activeClassName="main-nav-active">
             Videos
           </NavLink>
+          <NavLink exact to="/team" className="main-nav" activeClassName="main-nav-active">
+            Team
+          </NavLink>
         </div>
       </header>
   )

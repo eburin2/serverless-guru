@@ -15,6 +15,12 @@
   line-height: 1.6;
 }
 
+#about-serverless-guru {
+  font-size: 28px;
+  padding: 28px;
+  line-height: 2;
+}
+
 .date {
   padding-left: 15px;
   padding-bottom: 10px;
@@ -54,7 +60,7 @@ img.logo {
   width: 105px;
 }
 
-img {
+img.blog {
   width: 100%;
   height: auto;
 }
@@ -63,6 +69,7 @@ img.profile {
   width: 300px;
   height: 300px;
   margin-left: 130px;
+  margin-bottom: 20px;
   margin-top: 45px;
 }
 
@@ -83,7 +90,18 @@ header {
   padding-top: 20px;
 }
 
+.profile-name {
+  text-align: center;
+  padding-left: 125px;
+}
+
+.profile-title {
+  text-align: center;
+  padding-left: 130px;
+  padding-bottom: 20px;
+}
+
 .vids {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
