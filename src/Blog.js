@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 
 class Blog extends React.Component {
   constructor(props) {
@@ -28,22 +27,22 @@ class Blog extends React.Component {
           });
         }
       )
-  }
+    }
 
   render() {
     const { error, isLoaded, items } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <div>Loading...</div>
     } else {
       return (
             <div className="row">
               {items.map(item => (
               <div className="col-md-4 col-lg-4 col-xs-6 col-sm-12">
-                <h6 className="title">{item.title}</h6>
+                <h6 className="blog-title">{item.title}</h6>
                 <a target="_blank" rel="noopener noreferrer" href={item.link}><img alt={item.title} src={item.thumbnail} className="img-fluid blog"/></a>
-                <p className="date text-center">{item.pubDate}</p>
+                <p className="pub-date text-center">{item.pubDate}</p>
               </div>
               ))}
             </div>

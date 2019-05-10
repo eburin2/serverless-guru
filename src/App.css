@@ -6,7 +6,7 @@
   font-family: 'futura';
 }
 
-.title {
+.blog-title {
   text-align: center;
   padding-left: 7px;
   padding-top: 50px;
@@ -17,25 +17,19 @@
 
 #about-serverless-guru {
   font-size: 28px;
-  padding: 28px;
+  padding: 50px;
   line-height: 2;
 }
 
-.date {
+.pub-date {
   padding-left: 15px;
   padding-bottom: 10px;
   padding-top: 10px;
   font-weight: 500;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 .main-nav {
-  list-style-type: none;
-  padding-top: 5px;
+  padding-top: 4px;
   padding-right: 30px;
   cursor: pointer;
   color: #000;
@@ -80,14 +74,12 @@ header {
   flex-direction: row;
   align-items: center;
   padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-serverless-guru {
   font-weight: 600;
-}
-
-.main-page-heading {
-  padding-top: 20px;
 }
 
 .profile-name {
