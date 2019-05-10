@@ -3,9 +3,6 @@ import React from 'react';
 const Videos = () => {
   return (
     <div className="row">
-      <div className="text-center col-md-12 col-xs-12">
-        <h2 className="main-page-heading">Videos</h2>
-      </div>
       <div className="col-md-4 col-lg-4 col-xs-12">
         <iframe className="vids embed-responsive" width="200" height="300" title="serverless-warmup-plugin" src="https://www.youtube.com/embed/1j7USsviHpg" frameborder="0" allowFullScreen="true"></iframe>
         <iframe className="vids embed-responsive" width="200" height="300" title="serverless-guru-show" src="https://www.youtube.com/embed/m9bzh4pNMGI" frameborder="0" allowFullScreen="true"></iframe>
