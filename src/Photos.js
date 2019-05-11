@@ -86,6 +86,7 @@ class Photos extends React.Component {
             return (
                 <div>
                   <Photo
+                  key={photo.id}
                   image={photo.img}
                   name={photo.name}
                   title={photo.title}
