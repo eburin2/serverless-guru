@@ -82,6 +82,10 @@ header {
   font-weight: 600;
 }
 
+iframe {
+  border: 0;
+}
+
 .profile-name {
   text-align: center;
   padding-left: 130px;
