@@ -1,8 +1,8 @@
 import React from 'react';
 
 class Blog extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       error: null,
       isLoaded: false,
@@ -38,12 +38,12 @@ class Blog extends React.Component {
     } else {
       return (
             <div className="row">
-              {items.map(item => (
-              <div className="col-md-4 col-lg-4 col-xs-6 col-sm-12">
-                <h6 className="blog-title">{item.title}</h6>
-                <a target="_blank" rel="noopener noreferrer" href={item.link}><img alt={item.title} src={item.thumbnail} className="img-fluid blog"/></a>
-                <p className="pub-date text-center">{item.pubDate}</p>
-              </div>
+            {items.map(item => (
+            <div className="col-md-4 col-lg-4 col-xs-6 col-sm-12">
+              <h6 className="blog-title">{item.title}</h6>
+              <a target="_blank" rel="noopener noreferrer" href={item.link}><img alt={item.title} src={item.thumbnail} className="img-fluid blog"/></a>
+              <p className="pub-date text-center">{item.pubDate}</p>
+            </div>
               ))}
             </div>
       );
