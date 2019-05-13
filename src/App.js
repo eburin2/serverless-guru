@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Header from './Header';
 import Blog from './Blog';
 import Photos from './Photos';
@@ -16,17 +15,11 @@ const App = () => {
               <div className="col-md-12 col-xs-12">
                 <Header />
               </div>
-              <Route path="/team" exact component={Photos}/>
+              <Route path="/team" component={Photos}/>
             </div>
-            <div>
               <Route path="/blog" component={Blog}/>
-            </div>
-            <div>
               <Route path="/videos" component={Videos}/>
-            </div>
-            <div>
               <Route path="/" exact component={Home}/>
-            </div>
           </div>
         </Router>
       );

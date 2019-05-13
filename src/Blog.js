@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Blog extends React.Component {
+  //Only place you can directly write to this.state in the constructor method
   constructor() {
     super();
     this.state = {
@@ -10,11 +11,16 @@ class Blog extends React.Component {
     };
   }
 
+  //componentDidMount allows for adding objects to the array
   componentDidMount() {
+    //fetch asynchronously load contents of the url
     fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@serverlessguru")
+    // res.json will just return the body as promise with json content
       .then(res => res.json())
       .then(
+         // call this function when the above chained Promise resolves
         (result) => {
+          // this.setState function, which will accept an Object that will be eventually merged into Components current state.
           this.setState({
             isLoaded: true,
             items: result.items.slice(0,9)
