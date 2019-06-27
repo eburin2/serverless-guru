@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Blog extends React.Component {
   //Only place you can directly write to this.state in the constructor method
@@ -11,19 +12,21 @@ class Blog extends React.Component {
     };
   }
 
+
   //componentDidMount allows for adding objects to the array
   componentDidMount() {
     //fetch asynchronously load contents of the url
-    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@serverlessguru")
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/serverlessguru")
     // res.json will just return the body as promise with json content
       .then(res => res.json())
       .then(
          // call this function when the above chained Promise resolves
         (result) => {
           // this.setState function, which will accept an Object that will be eventually merged into Components current state.
+          console.log(result);
           this.setState({
             isLoaded: true,
-            items: result.items.slice(0,9)
+            items: result.items.slice(0, 9)
           });
         },
         (error) => {
@@ -37,24 +40,37 @@ class Blog extends React.Component {
 
   render() {
     const { error, isLoaded, items } = this.state;
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    } else if (!isLoaded) {
-      return <div>Loading...</div>
-    } else {
-      return (
-            <div className="row">
-            {items.map(item => (
-            <div key={item.pubDate} className="col-md-4 col-lg-4 col-xs-6 col-sm-12">
-              <h6 className="blog-title">{item.title}</h6>
-              <a target="_blank" rel="noopener noreferrer" href={item.link}><img alt={item.title} src={item.thumbnail} className="img-fluid blog"/></a>
-              <p className="pub-date text-center">{item.pubDate}</p>
-            </div>
-              ))}
-            </div>
-      );
-    }
-  }
-}
+       console.log(this.state.items)
+       if (error) {
+         return <div>Error: {error.message}</div>;
+       } else {
+         return (
+             <section>
+               <div className="container">
+                 <div className="section-header wow fadeInUp">
+                     <h2 className="blog-title">Blog</h2>
+                   <p className="text-center">Exploring the unknown and helping elevate the entire community through written word.</p>
+                 </div>
+                 <div className="row wow fadeInUp">
+                   {items.map((item) => {
+                       return <div key={item.guid.slice(21, 37)} className="col-md-4 col-sm-12">
+                       <Link to={{
+                         pathname: `blog/${item.link.slice(34, 150)}`,
+                         state: {
+                           item: item
+                         }
+                       }}><img alt={item.title}
+                       src={item.thumbnail} className="img-fluid blog-img"/></Link>
+                       <h6 className="blog-title">{item.title}</h6>
+                       </div>
+                   })}
+                 </div>
+               </div>
+             </section>
 
-export default Blog;
+         );
+       }
+     }
+   }
+
+   export default Blog;
