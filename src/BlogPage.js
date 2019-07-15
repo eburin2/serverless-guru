@@ -1,12 +1,8 @@
 // Third Party
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
 
 
 class BlogPage extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     console.log(this.props.location)
