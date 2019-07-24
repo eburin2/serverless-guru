@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 class Blog extends React.Component {
   //Only place you can directly write to this.state in the constructor method
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       error: null,
       isLoaded: false,
@@ -39,38 +39,39 @@ class Blog extends React.Component {
     }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { error, items } = this.state;
        console.log(this.state.items)
        if (error) {
          return <div>Error: {error.message}</div>;
        } else {
          return (
-             <section>
-               <div className="container">
-                 <div className="section-header wow fadeInUp">
-                     <h2 className="blog-title">Blog</h2>
-                   <p className="text-center">Exploring the unknown and helping elevate the entire community through written word.</p>
-                 </div>
-                 <div className="row wow fadeInUp">
-                   {items.map((item) => {
-                       return <div key={item.guid.slice(21, 37)} className="col-md-4 col-sm-12">
-                       <Link to={{
-                         pathname: `blog/${item.link.slice(34, 150)}`,
-                         state: {
-                           item: item
-                         }
-                       }}><img alt={item.title}
-                       src={item.thumbnail} className="img-fluid blog-img"/></Link>
-                       <h6 className="blog-title">{item.title}</h6>
-                       </div>
-                   })}
-                 </div>
-               </div>
-             </section>
-
-         );
-       }
-     }
-   }
+            <section>
+              <div className="container">
+                <div>
+                  <h2 className="blog-title">Blog</h2>
+                  <p className="text-center">Exploring the unknown and helping elevate the entire community through written word.</p>
+                </div>
+                <div className="row">
+                  {items.map((item) => {
+                    return (
+                      <div key={item.guid.slice(21, 37)} className="col-md-4 col-sm-12">
+                        <Link to={{
+                          pathname: `blog/${item.link.slice(34, 150)}`,
+                          state: {
+                             item: item
+                          }}}>
+                          <img alt={item.title} src={item.thumbnail} className="img-fluid blog-img"/>
+                        </Link>
+                        <h6 className="blog-title">{item.title}</h6>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </section>
+          );
+        }
+      }
+    }
 
    export default Blog;
