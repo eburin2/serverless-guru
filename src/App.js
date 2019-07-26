@@ -16,14 +16,13 @@ const App = () => {
               <div className="col-md-12 col-xs-12">
                 <Header />
               </div>
-              <Route path="/team" component={Photos}/>
+              <Route path="/team" component={Photos} />
             </div>
-              <Route exact path="/blog" component={Blog}/>
-              <Route exact path="/blog/:blogId" render={(props) =>
-              <BlogPage {...props} />
-              }/>
-              <Route path="/videos" component={Videos}/>
-              <Route path="/" exact component={Home}/>
+            <Route exact path="/blog" component={Blog} />
+            <Route exact path="/blog/:blogId" render={(props) =>
+            <BlogPage {...props} />}/>
+            <Route path="/videos" component={Videos} />
+            <Route path="/" exact component={Home} />
           </div>
         </Router>
       );
